@@ -3,15 +3,18 @@
 const Nodal = require('nodal');
 const Question = Nodal.require('app/models/question.js');
 
+const Relationships = Nodal.require('app/relationships.js');
+
 class QuestionsController extends Nodal.Controller {
 
   index() {
 
     Question.query()
       .where(this.params.query)
+      .join('user')
       .end((err, models) => {
 
-        this.respond(err || models);
+        this.respond(err || models, ['id', 'body', { user: ['id', 'email'] }]);
 
       });
 

@@ -13,4 +13,9 @@ const Nodal = require('nodal');
 
 */
 
+const Question = Nodal.require('app/models/question.js');
+const User = Nodal.require('app/models/user.js');
+
+Question.joinsTo(User, { multiple: true });
+
 module.exports = {}; // Don't need to export anything
