@@ -7,7 +7,7 @@ const os = require('os');
 if (cluster.isMaster) {
 
   console.log('begin');
-  console.log(os.cpus().length());
+  console.log(os.cpus().length);
   console.log(process.env.WEB_CONCURRENCY);
   console.log('end');
 
