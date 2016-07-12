@@ -5,6 +5,9 @@ const cluster = require('cluster');
 
 if (cluster.isMaster) {
 
+  console.log(require('os').cpus().length);
+  console.log(process.env);
+
   const daemon = Nodal.require('app/daemon.js');
   daemon.start(Nodal.my.Config.secrets.port);
 
