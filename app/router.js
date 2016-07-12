@@ -32,6 +32,7 @@ const IndexController = Nodal.require('app/controllers/index_controller.js');
 const QuestionsController = Nodal.require('app/controllers/questions_controller.js');
 const UsersController = Nodal.require('app/controllers/users_controller.js');
 const GraphqlController = Nodal.require('app/controllers/graphql_controller.js');
+const AccessTokensController = Nodal.require('app/controllers/access_tokens_controller.js');
 
 /* generator: end imports */
 
@@ -42,6 +43,7 @@ router.route('/').use(IndexController);
 router.route('/questions/{id}').use(QuestionsController);
 router.route('/users/{id}').use(UsersController);
 router.route('/graphql').use(GraphqlController);
+router.route('/access_tokens/{id}').use(AccessTokensController);
 
 /* generator: end routes */
 
