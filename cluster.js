@@ -2,11 +2,12 @@
 
 const Nodal = require('nodal');
 const cluster = require('cluster');
+const os = require('os');
 
 if (cluster.isMaster) {
 
-  console.log(require('os').cpus().length);
-  console.log(process.env);
+  console.log(os.cpus());
+  console.log(process.env.WEB_CONCURRENCY);
 
   const daemon = Nodal.require('app/daemon.js');
   daemon.start(Nodal.my.Config.secrets.port);
