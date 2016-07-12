@@ -2,11 +2,12 @@
   "development": {
     "main": {
       "adapter": "postgres",
-      "host": "localhost",
+      "host": "ec2-54-247-121-238.eu-west-1.compute.amazonaws.com",
       "port": "5432",
-      "user": "postgres",
-      "password": "",
-      "database": "refab_backend_development"
+      "user": "aeibskljnuvemp",
+      "password": "9vIog-flx0LwHzsJxk7xxRsBMs",
+      "database": "d1s3rgloafik4b",
+      "ssl": true
     }
   },
   "test": {
